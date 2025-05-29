@@ -32,13 +32,16 @@ python app.py
 ## Projektstruktur
 
 ```
-kontor-ål/
+office-eels/
 ├── app.py              # Hoved Flask applikation
 ├── requirements.txt    # Projekt afhængigheder
-├── static/            # Statiske filer (CSS, billeder)
+├── static/             # Statiske filer (CSS, billeder)
 │   └── style.css
+│   └── images/
+│       └── memes/     # Mappe til åle memes
 └── templates/         # HTML templates
     └── index.html
+    └── eksempler.html
 ```
 
 ## Brugte Teknologier
