@@ -13,7 +13,7 @@ def memes():
     if not os.path.exists(memes_dir):
         os.makedirs(memes_dir)
     memes = [f for f in os.listdir(memes_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-    return render_template('memes.html', memes=memes)
+    return render_template('eksempler.html', memes=memes)
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="1331") 
