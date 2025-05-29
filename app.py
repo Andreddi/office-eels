@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/memes')
+@app.route('/eksempler')
 def memes():
     memes_dir = os.path.join(app.static_folder, 'images', 'memes')
     if not os.path.exists(memes_dir):
