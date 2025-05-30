@@ -167,6 +167,16 @@
                     </div>
                 </div>
 
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Vidste du det om Ål?</h2>
+                        <div class="text-center">
+                            <p id="eelFact" class="lead mb-4">Tryk på knappen for at lære noget nyt om ål!</p>
+                            <button id="newFactBtn" class="btn btn-primary">Ny Ål-faktum</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="text-center mt-5">
                     <h3>Klar til at Forvandle Din Arbejdsplads?</h3>
                     <p class="lead">Kontakt os for at lære mere om vores kontor-ål adoptionsprogram!</p>
@@ -183,5 +193,32 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const eelFacts = [
+            "Ål kan leve op til 85 år i naturen!",
+            "Ål er kendt for at kunne svømme over 6.000 kilometer for at formere sig.",
+            "Ål har en fantastisk lugtesans og kan lugte en dråbe vand i en olympisk svømmepøl.",
+            "Ål er faktisk fisk, ikke slanger, selvom de ligner dem.",
+            "Ål kan overleve uden vand i flere timer, så længe deres hud forbliver fugtig.",
+            "Ål er elektriske! De kan generere op til 600 volt for at forsvare sig.",
+            "Ål ændrer farve flere gange gennem deres livscyklus.",
+            "Ål er kendt for at være meget intelligente og kan lære at genkende deres ejere.",
+            "Ål har en særlig slimhud der beskytter dem mod sygdomme og parasitter.",
+            "Ål er en af de ældste fiskearter på jorden, med fossiler der går 100 millioner år tilbage."
+        ];
+
+        function getRandomFact() {
+            const randomIndex = Math.floor(Math.random() * eelFacts.length);
+            return eelFacts[randomIndex];
+        }
+
+        document.getElementById('newFactBtn').addEventListener('click', function() {
+            const factElement = document.getElementById('eelFact');
+            factElement.textContent = getRandomFact();
+        });
+
+        // Show initial fact when page loads
+        document.getElementById('eelFact').textContent = getRandomFact();
+    </script>
 </body>
 </html> 
