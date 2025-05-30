@@ -102,4 +102,26 @@ ul li:before {
     .card img {
         margin: 1rem 0;
     }
+}
+
+.testimonial-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial-card h3 {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+    color: #495057;
+    font-style: italic;
 } 
